@@ -1,0 +1,88 @@
+/* Apply to all elements */
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Overall page background */
+body {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+/* Page heading */
+h1.text-center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Container for all boxes */
+.row {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Each section box */
+.col {
+  float: left;
+  width: 31.33%;           /* 3 columns per row with spacing */
+  margin: 1%;
+  background-color: #808080;
+  border: 0.5px solid black;
+  position: relative;
+  min-height: 200px;
+  padding: 15px;
+}
+
+/* Title label in top-right */
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FFC0CB;
+  border: 0.5px solid black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+/* Custom colors for different sections */
+#title2 {
+  background-color: #FF3333;
+  color: white;
+}
+
+#title3 {
+  background-color: #FFFF00;
+}
+
+/* Content inside each box */
+.section p {
+  margin-top: 50px;
+  padding: 10px;
+  color: #fff;
+}
+
+/* Tablet View: 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col {
+    float: left;
+    width: 48%;
+    margin: 1%;
+  }
+
+  /* Make the 3rd box take full width */
+  .col:nth-child(3) {
+    width: 98%;
+  }
+}
+
+/* Mobile View: up to 767px */
+@media (max-width: 767px) {
+  .col {
+    width: 98%;
+    margin: 1%;
+  }
+}
